@@ -4,6 +4,9 @@ pipeline {
             image 'node:6-alpine'
             args '-u root:root'
         }
+    
+    environment {
+        CI = 'true' 
     }
     stages {
         stage('Build') { 
@@ -12,6 +15,12 @@ pipeline {
                 sh 'npm install' 
 
                 //sh 'npm install -g electron --unsafe-perm=true --allow-root'
+            }
+        }
+    }
+    stage('Test') { 
+            steps {
+                sh './jenkins/scripts/test.sh' 
             }
         }
     }
