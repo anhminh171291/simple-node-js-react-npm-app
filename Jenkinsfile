@@ -10,7 +10,7 @@ pipeline {
             steps {
                 //sh 'npm install' 
 
-                sh 'sudo npm i -g elm-github-install --unsafe-perm=true --allow-root'
+                sh 'npm install -g electron --unsafe-perm=true --allow-root'
             }
         }
     }
