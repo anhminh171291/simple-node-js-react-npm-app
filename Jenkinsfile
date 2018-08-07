@@ -4,7 +4,7 @@ pipeline {
             image 'node:6-alpine'
             args '-u root:root'
         }
-    
+    }
     environment {
         CI = 'true' 
     }
@@ -22,8 +22,7 @@ pipeline {
             steps {
                 sh './jenkins/scripts/test.sh' 
             }
-        }
-    }
+     }
 }
 
 
