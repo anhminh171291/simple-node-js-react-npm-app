@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+                //sh 'npm install' 
+
+                sh 'sudo npm i -g elm-github-install --unsafe-perm=true --allow-root'
             }
         }
     }
