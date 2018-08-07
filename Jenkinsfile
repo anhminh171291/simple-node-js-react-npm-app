@@ -8,9 +8,10 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                //sh 'npm install' 
+                sh'npm cache clean'
+                sh 'npm install' 
 
-                sh 'npm install -g electron --unsafe-perm=true --allow-root'
+                //sh 'npm install -g electron --unsafe-perm=true --allow-root'
             }
         }
     }
